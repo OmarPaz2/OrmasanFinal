@@ -52,6 +52,14 @@ public class UsuarioController {
             return "redirect:/inicioSesion";
         }
     }
+
+    @GetMapping("/cerrarLogin")
+    public String cerrarSesion(HttpSession session){
+    session.removeAttribute("usuarioIniciado");
+        
+    return "redirect:/inicioSesion";
+    }
+    
     
 
 }
