@@ -162,7 +162,7 @@ public String RegistroTrabajo(@ModelAttribute  CosteoDTO trabajos, HttpSession s
 	Integer idCosteo = null; 
 	Integer sessionIDCosteo = (Integer)session.getAttribute("IDCosteo");
 	Usuario user = (Usuario) session.getAttribute("usuarioIniciado");
-	trabajos.setIdUsuarioCosteo(user.getIdUsuario());
+	
 	//TRABAJO
 	if(trabajos.getFechaTrabajo() !=null && (!trabajos.getNombreTrabajo().isEmpty() && trabajos.getNombreTrabajo() != null)) {
 		 trabajo = new Trabajo();
